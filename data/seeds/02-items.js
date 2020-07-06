@@ -12,7 +12,7 @@ exports.seed = function (knex) {
           desc_english: "the best tacos in town",
           desc_spanish: "los mejores tacos",
           category: "tacos",
-          admin_id: 1,
+          //  admin_id: 1,
         },
         {
           name: "ham torta",
@@ -21,7 +21,7 @@ exports.seed = function (knex) {
           desc_english: "the best tortas in town",
           desc_spanish: "los mejores tortas",
           category: "tortas",
-          admin_id: 1,
+          //  admin_id: 1,
         },
         {
           name: "roll tacos",
@@ -30,7 +30,7 @@ exports.seed = function (knex) {
           desc_english: "the best tacos in town",
           desc_spanish: "los mejores tacos rollos",
           category: "tacos",
-          admin_id: 1,
+          //  admin_id: 1,
         },
         {
           name: "enchiladas",
@@ -39,7 +39,7 @@ exports.seed = function (knex) {
           desc_english: "the best enchiladas in town",
           desc_spanish: "los mejores enchiladas",
           category: "enchiladas",
-          admin_id: 1,
+          //  admin_id: 1,
         },
       ]);
     });

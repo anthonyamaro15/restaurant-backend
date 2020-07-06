@@ -7,6 +7,9 @@ function add(body) {
 function findBy(filter) {
   return db("admin").where(filter);
 }
+function findById(id) {
+  return db("admin").where({ id }).first();
+}
 
 function updateAdmin(id, changes) {
   return db("admin").where({ id }).update(changes);
@@ -15,5 +18,6 @@ function updateAdmin(id, changes) {
 module.exports = {
   add,
   findBy,
+  findById,
   updateAdmin,
 };
