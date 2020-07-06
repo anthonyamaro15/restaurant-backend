@@ -8,7 +8,12 @@ function findBy(filter) {
   return db("admin").where(filter);
 }
 
+function updateAdmin(id, changes) {
+  return db("admin").where({ id }).update(changes);
+}
+
 module.exports = {
   add,
   findBy,
+  updateAdmin,
 };
