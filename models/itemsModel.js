@@ -20,10 +20,15 @@ function remove(id) {
   return db("items").where({ id }).del();
 }
 
+function updateCategoryPrice(category, changes) {
+  return db("items as i").where("i.category", category).update(changes);
+}
+
 module.exports = {
   add,
   findById,
   getAll,
   update,
+  updateCategoryPrice,
   remove,
 };

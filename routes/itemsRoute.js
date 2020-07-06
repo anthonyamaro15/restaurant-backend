@@ -41,6 +41,18 @@ route.patch("/edit/:id", validateId, (req, res) => {
     });
 });
 
+// route.patch("/editprice/:price", (req, res) => {
+//   const { category } = req.params;
+
+//   Items.updateCategoryPrice(category, req.body)
+//     .then((item) => {
+//       res.status(200).json({ message: "price updated successfully" });
+//     })
+//     .catch((err) => {
+//       res.status(500).json({ errMessage: "there was an error." });
+//     });
+// });
+
 route.delete("/delete/:id", validateId, (req, res) => {
   const { id } = req.params;
 
