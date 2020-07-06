@@ -1,3 +1,5 @@
+const Admin = require("../models/adminModel");
+
 function validateBody(req, res, next) {
   const { email, password } = req.body;
 
@@ -17,7 +19,22 @@ function validateEmail(req, res, next) {
   }
 }
 
+function validateId(req, res, next) {
+  const { id } = req.params;
+
+  Admin.findById(id).then((admin) => {
+    if (!admin) {
+      res
+        .status(404)
+        .json({ errMessage: "admin with that id does not exist." });
+    } else {
+      next();
+    }
+  });
+}
+
 module.exports = {
   validateBody,
   validateEmail,
+  validateId,
 };

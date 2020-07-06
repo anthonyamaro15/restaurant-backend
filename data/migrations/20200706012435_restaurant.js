@@ -15,13 +15,13 @@ exports.up = function (knex) {
       table.string("desc_english", 255).notNullable();
       table.string("desc_spanish", 255).notNullable();
       table.string("category", 255).notNullable();
-      table
-        .integer("admin_id")
-        .unsigned()
-        .notNullable()
-        .references("admin.id")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+      // table
+      //   .integer("admin_id")
+      //   .unsigned()
+      //   .notNullable()
+      //   .references("admin.id")
+      //   .onUpdate("CASCADE")
+      //   .onDelete("CASCADE");
     });
 };
 
