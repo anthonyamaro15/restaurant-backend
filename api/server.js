@@ -5,6 +5,7 @@ const cors = require("cors");
 const adminRoute = require("../auth/adminRoute");
 const resetPassword = require("../auth/resetAdminPass");
 const itemsRoute = require("../routes/itemsRoute");
+const restricted = require("../middlewares/restricted");
 
 const server = express();
 
@@ -14,6 +15,6 @@ server.use(cors());
 
 server.use("/api/auth", adminRoute);
 server.use("/api/auth", resetPassword);
-server.use("/api/items", itemsRoute);
+server.use("/api/items", restricted, itemsRoute);
 
 module.exports = server;
